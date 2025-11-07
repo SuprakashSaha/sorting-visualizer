@@ -1,12 +1,10 @@
-// loadWasm.js
 export async function loadWasm() {
   try {
-    // Dynamic import of Emscripten-generated JS module
     const moduleFactory = await import("../wasm/sorting");
 
-    // Initialize WebAssembly with proper .wasm file path
+    // 👇 This is the key line (fixes the path for GitHub Pages)
     const wasmModule = await moduleFactory.default({
-      locateFile: (file) => `/sorting.wasm`, // served from public/
+      locateFile: (file) => `${import.meta.env.BASE_URL}${file}`,
     });
 
     console.log("✅ WASM module loaded successfully!");
