@@ -1,7 +1,137 @@
+/* ----------------------------
+   FOOTER (BEM-structured)
+----------------------------- */
+
 .footer {
-  text-align: center;
   background-color: #15151f;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 20px;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 2px solid #242437;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer__contributors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 30px auto;
+}
+
+.footer__contributor {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer__contributor:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.footer__name {
+  color: #ffd86b;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.footer__link {
+  display: block;
+  color: #4bbcf5;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #ffca44;
+}
+
+.footer__college,
+.footer__stream {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 5px;
+}
+
+.footer__credit {
+  margin-top: 15px;
   color: #aaa;
-  padding: 15px;
-  margin-top: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+/* ----------------------------
+   RESPONSIVE DESIGN
+----------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer__title {
+    font-size: 1.8rem;
+  }
+  .footer__contributor {
+    max-width: 85%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .footer__contributors {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer__contributor {
+    max-width: 85%;
+    padding: 15px;
+  }
+
+  .footer__name {
+    font-size: 1.2rem;
+  }
+
+  .footer__link {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .footer__title {
+    font-size: 1.5rem;
+  }
+
+  .footer__link,
+  .footer__credit {
+    font-size: 1rem;
+  }
 }

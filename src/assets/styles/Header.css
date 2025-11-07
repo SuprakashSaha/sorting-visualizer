@@ -1,8 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------
+   HEADER STYLING
+---------------------------------- */
+
 .header {
-  background-color: #20202f;
-  color: #fff;
+  background: linear-gradient(135deg, #1c1c28, #2a2a3d);
+  color: #f5f5f5;
   text-align: center;
-  padding: 20px;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #333;
+  padding: 25px 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Optional hover/subtle glow on scroll or interaction */
+.header:hover {
+  background: linear-gradient(135deg, #2a2a3d, #1c1c28);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------------------
+   RESPONSIVE DESIGN
+---------------------------------- */
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+  .header {
+    font-size: 1rem;
+    padding: 20px 15px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .header {
+    font-size: 0.5rem;
+    padding: 15px 10px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .header {
+    font-size: 0.8rem;
+    padding: 12px 8px;
+  }
 }

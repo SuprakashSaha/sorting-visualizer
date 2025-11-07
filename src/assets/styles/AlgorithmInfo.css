@@ -1,17 +1,136 @@
 .algorithm-info {
-  background-color: #1f1f2b;
-  color: #fff;
-  width: 80%;
-  margin: 20px auto;
+  background-color: #101018;
+  color: #f5f5f5;
   border-radius: 10px;
-  padding: 15px;
+  padding: 1.5rem 2rem;
+  margin: 1rem auto;
+  width: 80vw;
   text-align: left;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
+
 .algorithm-info h2 {
   text-align: center;
-  margin-bottom: 10px;
+  color: #ffc107;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
-.algorithm-info p {
-  margin: 5px 0;
+
+.analysis-section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.114);
+  backdrop-filter: blur(10px);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.analysis-section p{
+  font-size: 1.2rem;
+}
+
+.result-section p,
+.applications p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.algorithm-info strong {
+  color: #00ff7f;
+  min-width: 130px;
+}
+
+/* Animated number style */
+.count {
+  display: inline-block;
+  color: #00e676;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.count.change {
+  transform: scale(1.1);
+  color: #76ff03;
+}
+
+.algorithm-info:hover {
+  box-shadow: 0 6px 16px rgba(0, 255, 127, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .algorithm-info {
+    width: 95%;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .algorithm-info h2 {
+    font-size: 1.4rem;
+  }
+
+
+  .analysis-section p,
+  .result-section p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .algorithm-info {
+    padding: 1rem 1.2rem;
+    text-align: center;
+  }
+
+  .analysis-section{
+    width: 100%;
+  }
+
+  .analysis-section p,
+  .result-section p{
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .applications p {
+    font-size: 0.9rem;
+  }
+
+  .algorithm-info strong {
+    min-width: unset;
+  }
+
+  .count {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .algorithm-info {
+    padding: 0.8rem 1rem;
+  }
+
+  .algorithm-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .analysis-section{
+    width: 100%;
+  }
+  .analysis-section p{
+    font-size: 1.2rem;
+  }
+
+
+  .result-section p {
+    font-size: 1rem;
+  }
 }

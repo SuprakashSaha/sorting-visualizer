@@ -28,8 +28,8 @@ export default function Controls({
         <label>Array Size: {arraySize}</label>
         <input
           type="range"
-          min="10"
-          max="200"
+          min="5"
+          max="70"
           value={arraySize}
           disabled={isSorting}
           onChange={(e) => setArraySize(Number(e.target.value))}
@@ -40,7 +40,7 @@ export default function Controls({
         Generate New Array
       </button>
 
-      <button onClick={() => onRun(selectedAlgorithm)} disabled={isSorting}>
+      <button id="sort" onClick={() => onRun(selectedAlgorithm)} disabled={isSorting}>
         {isSorting ? "Sorting..." : "Sort"}
       </button>
     </div>

@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Controls from "./components/Controls";
 import Visualizer from "./components/Visualizer";
 import AlgorithmInfo from "./components/AlgorithmInfo";
+import SortingComplexityTable from "./components/SortingComplexityTable";
 import Footer from "./components/Footer";
 import { useSorting } from "./hooks/useSorting";
 
@@ -33,6 +34,7 @@ function App() {
       />
       <Visualizer array={array} isSorting={isSorting} />
       <AlgorithmInfo selectedAlgorithm={selectedAlgorithm} result={result} />
+      <SortingComplexityTable />
       <Footer />
     </div>
   );

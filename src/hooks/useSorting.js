@@ -7,7 +7,7 @@ export function useSorting() {
   const [arrayColors, setArrayColors] = useState([]);
   const [isSorting, setIsSorting] = useState(false);
   const [result, setResult] = useState(null);
-  const [arraySize, setArraySize] = useState(50);
+  const [arraySize, setArraySize] = useState(20);
 
   useEffect(() => {
     async function init() {
