@@ -1,0 +1,17 @@
+.algorithm-info {
+  background-color: #1f1f2b;
+  color: #fff;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.algorithm-info h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.algorithm-info p {
+  margin: 5px 0;
+}

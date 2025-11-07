@@ -1,0 +1,27 @@
+.visualizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 350px;
+  margin: 20px auto;
+  width: 90%;
+  background-color: #101018;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  flex: 1;
+  margin: 0 1px;
+  border-radius: 4px;
+  transition: height 0.2s ease, background-color 0.2s;
+}
+
+.bar.unsorted {
+  background: orange;
+}
+
+.bar.sorted {
+  background: linear-gradient(180deg, #00ff7f, #008000);
+}
